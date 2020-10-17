@@ -8,7 +8,7 @@ import {
   isValid,
   validateSegments
 } from '../modification'
-import {mockModification} from '../mock-data'
+import {mockModification} from 'jest/mock-data'
 
 describe('Utils > Modification', () => {
   describe('create', () => {

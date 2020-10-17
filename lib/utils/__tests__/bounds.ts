@@ -1,7 +1,7 @@
 import {expect} from '@jest/globals'
+import {mockRegion} from 'jest/mock-data'
 import Leaflet from 'lib/leaflet'
 
-import {mockRegion} from '../mock-data'
 import {fromLatLngBounds, toLatLngBounds, reprojectBounds} from '../bounds'
 
 test('utils > bounds', () => {

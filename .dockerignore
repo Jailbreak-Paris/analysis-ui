@@ -1,0 +1,11 @@
+__mocks__
+**/__tests__
+.github
+.next
+bench
+cypress
+db
+jest
+migrations
+node_modules
+pages/changelog

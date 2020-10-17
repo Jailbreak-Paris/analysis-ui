@@ -7,7 +7,7 @@ import React from 'react'
 import {Map} from 'react-leaflet'
 import {Provider} from 'react-redux'
 
-import {makeMockStore, mockStores} from './mock-data'
+import {makeMockStore, mockStores} from 'jest/mock-data'
 
 // Next.js uses Math.random to generate unique ids for pages that get captured in snapshots.
 global.Math.random = () => 0.5
