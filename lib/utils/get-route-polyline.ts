@@ -1,13 +1,14 @@
 import lonlat from '@conveyal/lonlat'
-import {toGeoJSON} from '@mapbox/polyline'
+import { toGeoJSON } from '@mapbox/polyline'
+import getConfig from 'next/config'
 
-import {MB_TOKEN} from 'lib/constants'
+const { publicRuntimeConfig } = getConfig()
 
 const MINIMUM_COORDINATE_DISTANCE = 1e-6
 export const BASE_URL = 'https://api.mapbox.com'
 export const PATH = '/directions/v5/mapbox/driving'
 export const getMBUrl = (c) =>
-  `${BASE_URL}${PATH}/${c}.json?access_token=${MB_TOKEN}&alternatives=false&geometries=polyline`
+  `${BASE_URL}${PATH}/${c}.json?access_token=${publicRuntimeConfig.mapboxToken}&alternatives=false&geometries=polyline`
 
 /**
  * Get a route between two points from Mapbox. If the start and end coordinates

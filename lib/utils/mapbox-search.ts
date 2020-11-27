@@ -1,8 +1,9 @@
 import throttle from 'lodash/throttle'
 import get from 'lodash/get'
-import {stringify} from 'querystring'
+import { stringify } from 'querystring'
+import getConfig from 'next/config'
 
-import {MB_TOKEN} from 'lib/constants'
+const { publicRuntimeConfig } = getConfig()
 
 const DELAY_MS = 400
 const BASE_URL = 'https://api.mapbox.com'
@@ -16,7 +17,7 @@ export default throttle(function mapboxSearch(s, options = {}, cb) {
   if (get(s, 'length') < 3) return cb([])
 
   const querystring = stringify({
-    access_token: MB_TOKEN,
+    access_token: publicRuntimeConfig.mapboxToken,
     autocomplete: false,
     ...options
   })

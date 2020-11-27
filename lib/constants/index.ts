@@ -1,7 +1,6 @@
-import {RECOMMENDED_R5_VERSION} from 'lib/modules/r5-version/constants'
+import { RECOMMENDED_R5_VERSION } from 'lib/modules/r5-version/constants'
 
 export const ENV = process.env.NODE_ENV
-export const MB_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
 export const isServer = typeof window === 'undefined'
 
 /**
@@ -10,7 +9,7 @@ export const isServer = typeof window === 'undefined'
 export const LOGO_URL = '/img/conveyal-128x128.png'
 export const CB_HEX = '#2389c9'
 export const CB_DARK = '#185c86'
-export const CB_RGB = {r: 35, g: 137, b: 201}
+export const CB_RGB = { r: 35, g: 137, b: 201 }
 
 /**
  * API URLs
